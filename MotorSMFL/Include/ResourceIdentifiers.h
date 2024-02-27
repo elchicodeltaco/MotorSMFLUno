@@ -14,7 +14,10 @@ namespace Textures
 		Eagle,
 		Raptor,
 		Desert,
-		FondoPantallaTitulo
+		FondoPantallaTitulo,
+		ButtonNormal,
+		ButtonSelected,
+		ButtonPressed,
 	};
 }
 namespace Fonts

@@ -143,6 +143,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Aircraft.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="Comando.cpp" />
     <ClCompile Include="commandQueue.cpp" />
     <ClCompile Include="Component.cpp" />
@@ -151,12 +152,15 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="Label.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MenuState.cpp" />
     <ClCompile Include="Motor.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SceneNode.cpp" />
     <ClCompile Include="SpriteNode.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="StateStack.cpp" />
+    <ClCompile Include="TittleState.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +173,7 @@
     <ClInclude Include="Include\Container.hpp" />
     <ClInclude Include="Include\Entity.h" />
     <ClInclude Include="Include\Estados\GameState.h" />
+    <ClInclude Include="Include\Estados\MenuState.hpp" />
     <ClInclude Include="Include\Foreach.hpp" />
     <ClInclude Include="Include\Application.h" />
     <ClInclude Include="Include\Label.hpp" />
@@ -182,6 +187,7 @@
     <ClInclude Include="Include\StringHelpers.h" />
     <ClInclude Include="Include\World.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="TittleState.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Include\ResourceHolder.inl" />

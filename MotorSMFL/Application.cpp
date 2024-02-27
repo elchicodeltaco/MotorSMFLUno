@@ -3,7 +3,8 @@
 #include "Include/StateIdentifiers.hpp"
 #include "Include/StringHelpers.h"
 #include <SFML/Window/Event.hpp>
-
+#include "TittleState.h"
+#include "Include/Estados/MenuState.hpp"
 #include "Include//Estados/GameState.h"
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f / 60.f);
@@ -24,6 +25,11 @@ Application::Application() :
 	mFonts.load(Fonts::Main, "Assets/Sansation.ttf");
 
 	mTextures.load(Textures::FondoPantallaTitulo, "Assets/Textures/MainTittle.jfif");
+
+	mTextures.load(Textures::ButtonNormal, "Assets/Texture/BotonNormal.png");
+	mTextures.load(Textures::ButtonSelected, "Assets/Texture/ButtonSelected.png");
+	mTextures.load(Textures::ButtonPressed, "Assets/Texture/BotonPressed.png");
+
 	mStatisticsText.setFont(mFonts.get(Fonts::Main));
 	mStatisticsText.setPosition(5.f, 5.f);
 	mStatisticsText.setCharacterSize(15);
@@ -31,7 +37,7 @@ Application::Application() :
 	//Agregar o registrar los estados que tendra el juego
 	registerStates();
 	//cual es el estado eb el que inicia el juego
-	mStateStack.pushState(States::Game);
+	mStateStack.pushState(States::Title);
 }
 
 void Application::run() {
@@ -121,6 +127,6 @@ void Application::updateStatistics(sf::Time elapsedTime)
 void Application::registerStates()
 {
 	mStateStack.registerState<GameState>(States::Game);
-	//mStateStack.registerState<TitleState>(States::Title);
-	//mStateStack.registerState<MenuState>(States::Menu);
+	mStateStack.registerState<TittleState>(States::Title);
+	mStateStack.registerState<MenuState>(States::Menu);
 }

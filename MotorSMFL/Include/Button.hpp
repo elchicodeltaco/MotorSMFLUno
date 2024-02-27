@@ -1,7 +1,7 @@
 
-#include <Component.hpp>
-#include <ResourceIdentifiers.hpp>
-#include <ResourceHolder.hpp>
+#include "Component.hpp"
+#include "ResourceIdentifiers.h"
+#include "ResourceHolder.h"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
